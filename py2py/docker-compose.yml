@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+
+  pyhello:
+    image: pyhello
+    container_name: pyhello
+    #ports:
+    #  - 9200:9200
+
+  py2:
+    image: py2
+    container_name: py2
+    #command: python3 app.py
+    depends_on:
+      - pyhello
+    ports:
+      - 7777:7777
+
+    
+networks:
+  default:
+    name: pynet

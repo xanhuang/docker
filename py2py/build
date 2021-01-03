@@ -1,0 +1,2 @@
+docker build -t py2 py2/.
+docker build -t pyhello pyhello/.
